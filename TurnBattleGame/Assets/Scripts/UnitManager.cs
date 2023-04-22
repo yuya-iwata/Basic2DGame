@@ -4,15 +4,22 @@ using UnityEngine;
 //Manage Character
 public class UnitManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    //Status 
+    public int hp;
+    public int at;
+
+
+    //Attack target
+    public void Attack(UnitManager target)
     {
-        
+        target.Damage(at);
     }
 
-    // Update is called once per frame
-    void Update()
+    //Take damage
+    void Damage(int damage)
     {
-        
+        hp -= 10;
+        Debug.Log(name+"‚Í" + damage + "ƒ_ƒ[ƒW‚ğó‚¯‚½");
     }
+
 }
